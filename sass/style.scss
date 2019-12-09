@@ -1,0 +1,931 @@
+#head1{height:30px;background:#f9f9f9;
+        font:12px/30px "";
+        color:#666;
+        #headzuo{float: left;
+    
+        :nth-child(3){color:#e7ebf0;
+                    margin:0 8px;}
+        em{display:inline-block;
+            width:11px;height:15px;
+            background: url(../img/htel.png) no-repeat center;}
+}
+    #headyou{float: right;
+        :nth-child(even){color:#ebe7eb;
+            margin:0 11px}
+
+        span>a:hover{color:rgb(231, 65, 24)}
+
+        :nth-child(9){display: inline-block;
+                    font:12px/20px "";
+                    padding:0 5px;
+                    background:#fff ;
+                    border: 1px solid #e7e8e7;}
+            }
+
+}
+#head2{height:108px;
+    .logo{float: left;
+        display: block;}
+    #sou{float: left;
+        width:486px;
+        height:34px;
+        border:2px solid #f74a4a;
+        margin:20px 60px 0 130px;
+        overflow: hidden;
+
+        #sou-l{float: left;
+            width:116px;
+            height:31px;
+            font:12px/33px "";
+            text-indent: 23px;
+            color:#333;
+            border-right:1px solid #efefef;
+            border-bottom:3px solid #efefef;
+            background:url(../img/souv.png)no-repeat 96px 15px;
+        }
+        #sou-c{float: left;
+            border:none;
+            width:333px;
+            height:34px;
+            font:12px/34px "";
+            color:#aaa8a8;
+            text-indent:10px;
+            }
+
+        #sou-c:hover{color: black;}
+
+        #sou-r{width:36px;
+            height:34px;
+            background:#f74a4a url(../img/souwen.png) no-repeat center;float: left;}
+    }
+}
+
+#nav{height:54px;
+    background:#3a3f4a ;
+    overflow: hidden;
+    #nav-l{width:190px;
+            background: #eb4c4c url(../img/nav1.png) no-repeat 28px 14px;
+            font:16px/54px "";
+            text-indent: 58px;
+            color:#ff9191;
+            float: left}
+    #nav-c{font:16px/54px "";
+            color:#acb1bb;
+            text-align: center;
+            overflow: hidden;
+            float: left;
+
+        li{width:125px;float: left;}
+
+        li:hover{background:#f55656;
+            color:#fff;}
+
+        li.new{background:url(../img/new.png) no-repeat 99px 21px;}
+
+        li.new:hover{background:#f55656 url(../img/new.png) no-repeat 99px 21px;}
+    }
+    #nav-r{width:230px;
+        height:41px;
+        border-bottom:2px solid #e43333;
+        margin-top: 5px;
+        background: #f74a4a url(../img/car.png) no-repeat 42px 15px;
+        float: right;
+        font:16px/44px "";
+        color:#fff;
+        text-indent:70px;
+
+        .nnum{display:inline-block;
+            width:60px;
+            height:30px;
+            border-left:1px solid #e04040;
+            margin-top: 7px;
+            font:600 18px/30px "黑体";
+            text-indent: 0;
+            text-align: center;
+            float:right}
+    }
+}
+
+#banner{height:2962px;
+        background:#f3f4f6 url(../img/tbg.png) 
+        no-repeat center top;
+
+        #ban-t{height:330px;
+            overflow: hidden;
+        
+            .b-t-l{width:190px;
+                    height:330px;
+                 float: left;
+                 font:16px/65px "";
+                 color:#fff;
+                 text-indent:57px;
+                background:#f55656;
+
+                li{height:65px;
+                    border-bottom: 1px solid #ee4545;
+                    position: relative;
+                    
+                    i{width:25px;
+                        height:26px;
+                        display:block;
+                        background: url(../img/biao.png) no-repeat;
+                        background-position:-146px -177px;
+                        position: absolute;
+                        left:20px;
+                        top:20px;
+                    }     
+                    
+                    em{width:8px;
+                        height:11px;
+                        display: block;
+                        background: url(../img/biao.png) no-repeat;
+                        background-position: -179px -177px;
+                        position: absolute;
+                        left:173px;
+                        top:28px;
+                    }
+                }
+                li:nth-child(2){
+                    i{background-position:-27px -177px;}
+                }
+                li:nth-child(3){
+                    i{background-position:-59px -177px;}
+                }
+                li:nth-child(4){
+                    i{background-position:-87px -177px;}
+                }
+                li:nth-child(5){
+                    i{background-position:-118px -177px;}
+                }
+
+                }
+            #b-t-c{
+                float: left;
+                width:770px;
+                height:330px;
+                overflow: hidden;
+            }
+
+            #b-t-r{width:230px;
+                height:330px;
+                background:#fff;
+                float: left;
+
+                li{width:220px;
+                margin-left:5px;}
+                
+                #r1{height:86px;
+                    border-bottom: 1px solid #efefef;
+
+                    img{display: block;
+                        float: left;
+                        margin:18px 11px 0 13px;
+                    }
+                    span{margin-top:15px;
+                        font:12px/18px "";
+                        color:#999;
+                        display: inline-block;
+                        width:145px;
+
+                        a{
+                            color:#1994eb;
+                        }
+                    }
+                }
+                #r2{height:117px;
+                    border-bottom: 1px solid #efefef;
+                    
+                    p{font:600 12px/36px "";
+                        text-indent:10px;
+                        color:#3a3f4a;}
+
+                    ul{margin-left:10px;
+                        overflow: hidden;
+
+                        li{width:50px;
+                            font:12px/30px "";
+                            color:#3a3f4a;
+                            float: left;
+                            margin-right: 20px;
+                            margin-left: 0;
+                            text-align:center;
+                        }
+                    }
+                }
+                #r3{height:125px;
+                    overflow: hidden;
+                    
+                    dl{margin:5px 0 0 10px;
+                        width:193px;
+                    
+                    dt{width:188px;
+                        overflow: hidden;
+
+                        a{float: left;
+                            font:600 12px/25px "";
+                            color:#3a3f4a;
+                            display: block;
+                            width:151px;
+                            overflow: hidden;
+                        }
+
+                        span{float: right;
+                            display: block;
+                            color:#666;
+                            font:12px/25px "";
+                            }
+                    }
+
+                    dd{width:193px;
+                        overflow: hidden;
+                        height:22px;
+                        
+                        a{
+                            color:#666;
+                            font:12px/22px "";
+                            display: block;
+                            float: left;
+                            width:151px;
+                            overflow: hidden;
+                        }
+
+                        span{display: block;
+                            font:12px/22px "";
+                            color:#99a6bf;
+                            float: right;
+                        }
+                    }
+                    }
+
+                }
+            }
+
+
+        }
+    #ban-b{overflow: hidden;
+
+        #ban-1{
+            margin-top:10px;
+            height:333px;
+            overflow: hidden;
+
+            #b1-l{
+                width:950px;
+                float: left;
+                height:333px;
+
+                h3{font:18px/44px "";
+                    color:#3a3f4a;
+                    overflow: hidden;
+
+                    s{width:20px;
+                        height:20px;
+                        display:block;
+                        float: left;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:-30px -75px;
+                        margin:12px 9px 0 0;
+                    }
+
+                }
+                #b1-lbox{
+                    width:960px;
+                    height:290px;
+
+                    dl{width:316px;
+                        height:144px;
+                        border-right:1px solid #f3f4f6;
+                        border-bottom:1px solid #f3f4f6;
+                        float: left;
+                        background:#fff;
+
+                        dt{width:124px;
+                            height:144px;
+                            overflow: hidden;
+                            float: left;
+
+                            img{width:80px;
+                                height:67px;
+                                margin:32px 0 0 30px;
+
+                            }
+                        }
+
+                        dd{height:121px;
+                            padding-top:23px;
+                            float: left;
+
+                            b{font-weight:bold;}
+
+                            p{font:12px/22px "";
+                                color:#3a3f4a;
+
+                                .red{color:#f74a4a;
+                                font:600 12px/22px "黑体";
+                                }
+                            }
+
+                            .sale{width:90px;
+                                height:25px;
+                                display:block;
+                                border-bottom:2px solid #e43333;
+                                margin-top:3px;
+                                color:#fff;
+                                font:12px/27px "";
+                                text-align:center;
+                                background:#f74a4a;
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            #b1-r{
+                width:230px; 
+                float: right;
+                height:333px;
+
+                h3{font:18px/44px "";
+                    color:#3a3f4a;
+                    overflow: hidden;
+
+                    s{width:22px;
+                        height:22px;
+                        display:block;
+                        float: left;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:-60px -73px;
+                        margin:10px 7px 0 0;
+                    }
+
+                }
+
+                #b1-rbox{
+                    background: #fff;
+                    height:270px;
+                    width:190px;
+                    overflow: hidden;
+                    padding:10px 20px;
+
+                    img{display:block;
+                        width:190px;
+                        height:162px;
+                    }
+
+                    .rb1{
+                        font:12px/32px "";
+                        color:#3a3f4a;
+
+                        b{font-weight: bold;}
+                    }
+                    #red{
+                        font:12px/1 "";
+                        color:#f74a4a;
+
+                        .red{color:#f74a4a;
+                            font:600 12px/1 "";
+                            }
+                    }
+                    #b1time{
+                        height:16px;
+                        margin:8px 0 10px;
+                        font:12px/16px "";
+                        color:#3a3f4a;
+
+                        b{
+                            font:700 12px/16px "黑体";
+                            color:#fff;
+                            padding:1px 6px;
+                            margin-right:2px;
+                            background:#7f8b99; 
+                            border-radius:2px;
+                        }
+                    }
+                    .sale{width:190px;
+                        height:25px;
+                        display:block;
+                        border-bottom:2px solid #e43333;
+                        margin-top:3px;
+                        color:#fff;
+                        font:12px/27px "";
+                        text-align:center;
+                        background:#f74a4a;
+
+                    }
+
+                }
+
+            }
+        }
+        #ban-2{height:260px;
+            margin-top:10px;
+            overflow: hidden;
+
+            #b2-l{width:960px;
+                    float: left;
+
+                h3{font:18px/44px "";
+                    color:#3a3f4a;
+                    overflow: hidden;
+
+                    s{width:20px;
+                        height:20px;
+                        display:block;
+                        float: left;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:0 -75px;
+                        margin:12px 9px 0 0;
+                    }
+                    span{
+                        font:15px/1 "";
+                        color:#e5e3e7;
+                        margin:0 14px;
+                    }
+                    a{
+                        font:12px/1 "";
+                        color:#1994eb;
+                    }
+
+                }
+
+                #b2-lbox{
+                    width:960px;
+                    height:216px;
+                    overflow: hidden;
+                    
+                    li{
+                        width:190px;
+                        height:216px;
+                        border-left:1px solid #f3f4f6;
+                        overflow: hidden;
+                        background:#fff;
+                        float: left;
+
+                        img{margin:38px 50px 15px;
+                            display: block;
+                            width:90px;
+                            height:75px;
+                        }
+                        a{display: block;
+                          font:12px/24px "";
+                          color:  #3a3f4a;
+                          text-align: center;
+
+                           .name{
+                               font:700 12px/1 "";
+                           }
+                        }
+
+                        .pre{
+                            text-align: center;
+                            font:12px/22px "黑体";
+                            color:#f74a4a;
+
+                            span{
+                                font-weight:bold;
+                            }
+                        }
+                    }
+                }
+            }
+            #b2-r{
+               width:230px;
+                float:right;
+
+               h3{font:18px/44px "";
+                color:#3a3f4a;
+                overflow: hidden;
+
+                    s{width:20px;
+                        height:20px;
+                        display:block;
+                        float: left;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:0 -75px;
+                        margin:12px 9px 0 0;
+                    }
+                }
+                #b2-lbox{
+                    width:190px;
+                    height:146px;
+                    padding:35px 20px;
+                    background:#fff ;
+                    text-align: center;
+
+                    .qiandao{
+                        display:block ;
+                        width:190px;
+                        height:77px;
+                        background:#f74a4a ;
+                        border-bottom:6px solid #e43333;
+                        position: relative;
+                        text-indent:30px;
+
+                        i{  
+                            width:27px;
+                            position:absolute;
+                            height:26px;
+                            display:block;
+                            background:url(../img/biao.png) no-repeat;
+                            background-position:-140px -136px;
+                            left:38px;
+                            top:26px;
+                        }
+                        span{
+                            font:18px/77px "";
+                            color:#fff;    
+                        } 
+                    }
+                    p{
+                        font:12px/38px "";
+                        color:#3a3f4a;
+                        text-align: center;
+                    }
+                    span{font:12px/1 "";
+                        color:#3a3f4a;
+                    }
+                }
+
+            }
+
+        }
+
+        #ban-3{
+            height:370px;
+            margin-top:10px;
+
+            h3{
+                font:18px/44px "";
+                    color:#3a3f4a;
+                    overflow: hidden;
+
+                    s{width:20px;
+                        height:20px;
+                        display:block;
+                        float: left;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:0 -75px;
+                        margin:12px 9px 0 0;
+                    }
+                    a{
+                        float:right;
+                        font:12px/44px "";
+                        color:#1994eb;
+                    }
+            }
+
+            #b3-box{
+                height:326px;
+                overflow: hidden;
+                background:#fff;
+
+                img{
+                    float: left;
+                    display:block;
+                    margin-top:10px;
+                    margin-left:10px;
+                    width:383px;
+                    height:148px;
+                }
+            }
+
+        }
+        .ban-4{
+            height:348px;
+            margin-top:10px;
+
+            h3{
+                font:18px/44px "";
+                    color:#3a3f4a;
+                    overflow: hidden;
+
+                    s{width:20px;
+                        height:20px;
+                        display:block;
+                        float: left;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:-120px -75px;
+                        margin:12px 9px 0 0;
+                    }
+                    .d4-s2{
+                        background-position:-150px -75px;
+                    }
+                    .d4-s3{
+                        background-position:-180px -75px;
+                    }
+                    .d4-s4{
+                        background-position:-120px -105px;
+                    }
+
+                    a{
+                        float:right;
+                        font:12px/44px "";
+                        color:#1994eb;
+                    }
+            }
+
+            .b4-box{
+                height:304px;
+                overflow: hidden;
+                background:#fff ;
+
+                .qu{
+                    width:240px;
+                    height:304px;
+                    float: left;
+                    display: block;
+                }
+
+            ul{
+                overflow: hidden;
+                float: left;
+
+                li{
+                    float: left;
+                    width:190px;
+                    height:304px;
+                    border-right:1px solid #f3f4f6;
+                    position: relative;
+                    
+
+                    .b4-lt{
+                        position: absolute;
+                        left:20px;
+                        top:23px;
+                        transition:.2s linear;
+                        &:hover{transform:translate(10px,0);}
+                        .b4-lp1{
+                            font:16px/1 "";
+                            color:#3a3f4a;
+                        }
+                        .b4-lp2{
+                            font:12px/29px "";
+                            color:#f74a4a;
+                            span{
+                                font-weight:bold;
+                            }
+                        }
+                        .b4-lp3{
+                            font:12px/1 "";
+                            color:#3a3f4a;
+                        }
+                        img{
+                            width:90px;
+                            height:75px;
+                            margin-top:13px;
+                        }
+                    }
+
+                    .b4-lb{
+                        position: absolute;
+                        height:100px;
+                        width:190px;
+                        bottom:0px;
+                        border-top:1px solid #f3f4f6;
+                        overflow: hidden;
+
+                        img{margin:20px 10px 0 20px;
+                            width:60px;
+                            height:50px;
+                            float: left;
+
+                        }
+                        .b4-lptxt{
+                            float:left;
+                            margin-top:25px;
+
+                            p{font:12px/1 "";
+                            color:#3a3f4a;}
+
+                            .b4-lp4{
+                                font:12px/29px "";
+                                color:#f74a4a;
+                                span{font-weight:bold;}
+                            }
+                        }
+                    }
+                    
+                }
+
+            }
+            
+            dl{
+                float:right;
+                width:186px;
+                height:304px;
+            
+                dt{
+                width:181px;
+                height:52px;
+                padding:20px 5px 15px 0;
+                overflow: hidden;
+                background:#fff;
+                    p{float: left;}
+
+                    .b4-dt1{
+                        width:20px;
+                        height:52px;
+                        font:12px/16px "";
+                        color:#fff;
+                        margin-right:10px;
+                        background:url(../img/biao.png) no-repeat;
+                        background-position:0 -300px;
+                        text-align: center;
+                    }
+                    .b4-dt2{
+                        font:12px/20px "";
+                        color:#3a3f4a;
+                        width:85px;
+                        span{
+                            font:700 12px/20px "黑体";
+                            color:#f74a4a;
+                        }
+                    }
+                    img{
+                        float: right;
+                        width:60px;
+                        height:50px;
+                        display: block;
+                    }
+                }
+            }
+            dd{
+                width:181px;
+                height:35px;
+                padding:5px 5px 13px 0;
+                border-top:1px solid #f3f4f6;
+                overflow: hidden;
+                background:#fff;
+                p{float: left;}
+
+                .b4-dd1{
+                    width:20px;
+                    height:24px;
+                    font:12px/22px "黑体";
+                    color:#fff;
+                    background:url(../img/biao.png) no-repeat;
+                    background-position:-20px -300px;
+                    text-align: center;
+                    margin-right:10px;
+                }
+                .b4-dd2{
+                    width:89px;
+                    font:12px/22px "";
+                    color:#3a3f4a;
+                    span{
+                        color:#f74a4a;
+                        font:700 12px/22px "黑体";
+                    }
+                }
+                img{
+                    float: right;
+                    width:40px;
+                    height:34px;
+                    display: block; 
+                }
+            }
+
+            }
+
+        }
+
+        #ban-5{
+            width:1190px;
+            height:146px;
+            overflow: hidden;
+            margin-top:20px;
+
+            img{
+                float: left;
+                margin-right:10px;
+                display: block;
+                width:390px;
+                height:146px;
+            }
+            .yu{
+                margin-right:0;
+            }
+            
+        }
+    }
+
+}
+
+
+#foot{height:356px;
+    background:#3b3f4a;
+    overflow: hidden;
+
+    ul{
+        height:183px;
+        margin-top:25px;
+        overflow: hidden;
+        width:1190px;
+        border-bottom:1px solid #444853;
+
+        li{float: left;
+        border-right:1px solid #444853;
+            font:12px/24px "";
+            color:#acb1bb;
+            height:150px;
+            overflow: hidden;
+
+            div{
+                float: left;
+                height:150px;
+                s{
+                    width:32px;
+                    height:32px;
+                    background:url(../img/biao.png) no-repeat;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            .fp1{
+                font:16px/36px "";
+            }
+        }
+
+        .fl1{
+            width:209px;
+            .fll{
+                width:48px;
+                s{
+                    background-position:0 -136px;
+                }
+            }
+        }
+        .fl2{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-32px -136px;
+                }
+            }
+        }
+        .fl3{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-63px -136px;
+                }
+            }
+        }
+        .fl4{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-95px -136px;
+                }
+            }
+        }
+        .fl5{
+            width:299px;
+            overflow: hidden;
+            border: none;
+
+            div{
+                width:100px;
+                overflow: hidden;
+                img{
+                    display: block;
+                }
+
+                p{font:16px/56px "";
+                color:#88abb4;
+                text-align: center;
+                }
+            }
+            .f5-l{
+                margin-left:52px;
+            }
+
+            .f5-r{
+                margin-left:40px ;
+            }
+            
+        }
+
+
+    }
+    .ftxt{
+        margin-top:32px;
+
+        font:12px/20px "";
+        color:#81858f;
+        text-align: center;
+    }
+
+}
