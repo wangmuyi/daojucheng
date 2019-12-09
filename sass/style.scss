@@ -164,8 +164,22 @@
                 width:770px;
                 height:330px;
                 overflow: hidden;
-            }
 
+                #ban-js{
+                width:770px;
+                height:330px;
+                overflow: hidden;
+                position: relative;
+                img{
+                    height:330px;
+                    width:770px;
+                    position: absolute;
+                    left: 0;
+                    top:0 ;
+                    }
+                }
+           
+            }
             #b-t-r{width:230px;
                 height:330px;
                 background:#fff;
