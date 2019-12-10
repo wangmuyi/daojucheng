@@ -1,0 +1,83 @@
+header{height:30px;background:#f9f9f9;
+    font:12px/30px "";
+    color:#666;
+    
+    #headzuo{float: left;
+        
+    :nth-child(3){color:#e7ebf0;
+                margin:0 8px;}
+    em{display:inline-block;
+        width:11px;height:15px;
+        background: url(../img/htel.png) no-repeat center;}
+}
+#headyou{float: right;
+    :nth-child(even){color:#ebe7eb;
+        margin:0 11px}
+
+    span>a:hover{color:rgb(231, 65, 24)}
+
+    :nth-child(9){display: inline-block;
+                font:12px/20px "";
+                padding:0 5px;
+                background:#fff ;
+                border: 1px solid #e7e8e7;}
+        }
+    
+}
+nav{
+    background:url(https://js01.daoju.qq.com/mall/images/channelmall/lol/bg-head.jpg) no-repeat center top;
+    height:201px;
+
+    #nt{
+        height:125px;
+        overflow: hidden;
+
+        img{
+            display: block;
+            float: left;
+        }
+        .nt-l{
+            width:382px;
+            height:125px;
+        }
+        .nt-r{
+            width:288px;
+            height:125px;
+        }
+
+        #sou{float: left;
+            width:518px;
+            height:46px;
+            border:1px solid #566068;
+            margin-top:40px;
+            overflow: hidden;
+    
+            #sou-c{float: left;
+                border:none;
+                width:471px;
+                height:46px;
+                font:12px/46px "";
+                color:#aaa8a8;
+                text-indent:13px;
+                }
+    
+            #sou-c:hover{color: black;}
+    
+            #sou-r{width:47px;
+                height:46px;
+                background:#63656b url(../img/heiwen.png) no-repeat center;
+                float: left;
+                }
+    
+         }
+        
+    }
+
+    #nb{
+        height:76px;
+        background:#191b25;
+
+    }
+
+}
+
