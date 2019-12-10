@@ -1,5 +1,5 @@
 define( ()=>{
-    
+
     function move(ele,data,cb){
         clearInterval(ele.t)
         ele.t = setInterval(function(){
@@ -32,62 +32,45 @@ define( ()=>{
     class ban{
     constructor(){
         this.aimg =document.querySelectorAll("#ban-js img");
-        this.left=document.querySelector("#b-t-c .bleft");
-        this.right=document.querySelector("#b-t-c .bright");
+        this.left=document.querySelector(".bleft");
+        this.right=document.querySelector(".bright");
         this.box=document.querySelector("#ban-js")
         this.index = 0;
         this.iPrev = this.aimg.length-1;
         this.addEvent();
         this.init();
     }
-    
-
-}
-
-
-
-    return ban;
-})
-
-    class Banner{
-        constructor(){
-            this.aimg = document.querySelectorAll('#banner a');
-            this.left = document.querySelector('#banner .btnl');
-            this.right = document.querySelector('#banner .btnr');
-            this.banner = document.querySelector('#banner .banner');
-            this.index = 0;
-            this.iPrev = this.aimg.length-1;
-            this.addEvent();
-            this.init();
+    init(){
+        let that = this;
+        this.t = setInterval(()=>{
+            this.mright();
+        },2000)
+        this.box.onmouseover = ()=>{
+            clearInterval(that.t)
         }
-        init(){
-            let that = this;
-            this.t = setInterval(()=>{
-                this.mRight();
-            },3000)
-            this.banner.onmouseover = ()=>{
-                clearInterval(that.t)
-            }
-            this.banner.onmouseout = ()=>{
-                that.t = setInterval(()=>{
-                    that.mRight();
-                },3000)
-            }
+        this.box.onmouseout = ()=>{
+            that.t = setInterval(()=>{
+                that.mright();
+            },2000)
         }
+    }
         addEvent(){
-            let that = this;
-            this.mLeft = function(){
-                that.creatIndexLeft();
+            let that=this;
+
+            this.mleft=function(){
+                console.log(1)
+                that.addleft();
             }
-            this.mRight = function(){
-                that.creatIndexRight();
+            this.mright=function(){
+                console.log(2)
+                that.addright();
             }
-            this.left.addEventListener("click",this.mLeft);
-            this.right.addEventListener("click",this.mRight);
-     
+            this.left.addEventListener("click",this.mleft);
+            this.right.addEventListener("click",this.mright);
         }
-        creatIndexLeft(){
-            if(this.index == 0){
+
+        addleft(){
+            if(this.index==0){
                 this.index = this.aimg.length-1;
                 this.iPrev = 0;
             }else{
@@ -96,7 +79,7 @@ define( ()=>{
             }
             this.move(1);
         }
-        creatIndexRight(){
+        addright(){
             if(this.index == this.aimg.length-1){
                 this.index = 0;
                 this.iPrev = this.aimg.length-1;
@@ -117,8 +100,6 @@ define( ()=>{
             })
             
         }
-    }
-
-    return Banner;
+}
+    return ban
 })
-

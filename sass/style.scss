@@ -164,6 +164,7 @@
                 width:770px;
                 height:330px;
                 overflow: hidden;
+                position: relative;
 
                 #ban-js{
                 width:770px;
@@ -174,9 +175,31 @@
                     height:330px;
                     width:770px;
                     position: absolute;
-                    left: 0;
+                    left:770px;
                     top:0 ;
                     }
+                    img:first-child {
+                    left:0;
+                }
+                    button{
+                        width:40px;
+                        height:60px;
+                        background:black;
+                        opacity:.5;
+                        font:30px/60px "";
+                        text-align:center;
+                        position: absolute;
+                        top:140px;
+                        border:0;
+                        color:#fff;
+                    }
+                }
+
+                .bleft{
+                    left:0;
+                }
+                .bright{
+                    right:0;
                 }
            
             }

@@ -1,13 +1,13 @@
 require.config({
 	baseUrl:"module",
 	paths:{
-		ban:"banner"
+        ban:"banner",
+        dis:"display"     
 	}
 })
 
-require(["ban"],(t1)=>{
+require(["banner","display"],(t1,t2)=>{
 	
-    console.log("加载完成")
-    
-    t1();
+    new t1();
+    new t2();
 })
