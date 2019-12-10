@@ -1,0 +1,11 @@
+define(()=>{
+
+    class=""
+
+
+
+
+
+
+
+})(jQuery);

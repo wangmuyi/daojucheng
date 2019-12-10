@@ -44,25 +44,23 @@ define( ()=>{
         let that = this;
         this.t = setInterval(()=>{
             this.mright();
-        },2000)
-        this.box.onmouseover = ()=>{
+        },3000)
+        this.box.onmouseover=()=>{
             clearInterval(that.t)
         }
-        this.box.onmouseout = ()=>{
+        this.box.onmouseout=()=>{
             that.t = setInterval(()=>{
                 that.mright();
-            },2000)
+            },3000)
         }
     }
         addEvent(){
             let that=this;
 
             this.mleft=function(){
-                console.log(1)
                 that.addleft();
             }
             this.mright=function(){
-                console.log(2)
                 that.addright();
             }
             this.left.addEventListener("click",this.mleft);
