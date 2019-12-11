@@ -76,7 +76,291 @@ nav{
     #nb{
         height:76px;
         background:#191b25;
+        width:1190px;
+        overflow: hidden;
 
+        li{
+            width:133px;
+            text-align: center;
+            float: left;
+
+            &:hover{
+                a{
+                    color:#d75009;
+                }
+            }
+
+            a{
+                font:18px/76px "";
+                color:#9f9f9f;
+            }
+        }
+        .car{
+            float: right;
+            width:185px;
+            a{color:#d75009;}
+        }
+
+    }
+
+}
+#banner{
+    background:#f3f4f6;
+
+    dl{
+        height:54px;
+        overflow: hidden;
+        font:12px/54px "";
+        color:#222;
+        text-align: center;
+        background: #e6e6e8;
+
+        dt{
+            float: left;
+            width:152px;
+            &:hover{
+                color:#36ab87;
+            }
+        }
+        dd{
+          float: left;
+          width:118px;  
+          &:hover{
+              color:#36ab87;
+          }
+        }
+        .te{
+            height:52px;
+            border-bottom:2px solid #36ab87;
+            color:#36ab87;
+        }
+    }
+    p{
+        height:50px;
+        font:14px/50px "";
+        color:#606060;
+        a{
+            font:14px/50px "";
+            color:#3a3f4a;
+        }
+    }
+}
+
+main{
+    background:#f3f4f6;
+    height:1205px;
+
+    #ml{
+        width:195px;
+        padding: 0 13px 0 20px;
+        float: left;
+        background:#fafbfc ;
+        height:949px;
+        
+        h3{
+            font:16px/47px "";
+            border-bottom:2px solid #f3f4f6;
+        }
+        ul{
+            width:195px;
+
+            li{
+                height:54px;
+                width:189px;
+                border-bottom:1px dashed #e7e7e7;
+                padding:7px 3px 19px;
+                position: relative;
+
+                img{
+                    width:76px;
+                    height:54px;
+                    float: left;
+                    display: block;
+                }
+                i{
+                    width:20px;
+                    height:24px;
+                    position: absolute;
+                    background:url(../img/lv.png) no-repeat;
+                    font:10px/20px "黑体";
+                    color:#fff;
+                    text-align: center;
+                    display: block;
+                    z-index:10;
+                    left:-3px;
+                    top:0px;
+                }
+                p{
+                    font:12px/1 "";
+                    color:#222;
+                    text-indent:8px;
+                }
+                .zz{
+                    font:12px/30px "";
+                }
+            }
+        }
+
+    }
+
+    #mr{
+        float: right;
+        width:952px;
+        background:#fafbfc ;
+        height:1205px;
+        overflow: hidden;
+
+        .shop{
+            width:124px;
+            height:325px;
+            float: left;
+            padding:18px 38px 0;
+            border:1px solid #f0f1f1;
+            border-radius:10px;
+            margin:30px 16px 0;
+            overflow: hidden;
+
+            img{
+                width:116px;
+                height:212px;
+                margin: 0 auto;
+                display: block;
+            }
+            p{
+                font:700 14px/24px "";
+                text-align: center;
+
+                a{
+                    text-indent:15px;
+                    color:#ff5900;
+                }  
+            }
+            .pre{
+                font:12px/24px "";
+            }
+            .sale{
+                width:124px;
+                height:32px;
+                display: block;
+                font:12px/32px "";
+                background: #36ab87;
+                color:#fff;
+                text-align: center;
+            }
+        }
+    }
+}
+#foot{height:356px;
+    background:#3b3f4a;
+    overflow: hidden;
+
+    ul{
+        height:183px;
+        margin-top:25px;
+        overflow: hidden;
+        width:1190px;
+        border-bottom:1px solid #444853;
+
+        li{float: left;
+        border-right:1px solid #444853;
+            font:12px/24px "";
+            color:#acb1bb;
+            height:150px;
+            overflow: hidden;
+
+            div{
+                float: left;
+                height:150px;
+                s{
+                    width:32px;
+                    height:32px;
+                    background:url(../img/biao.png) no-repeat;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            .fp1{
+                font:16px/36px "";
+            }
+        }
+
+        .fl1{
+            width:209px;
+            .fll{
+                width:48px;
+                s{
+                    background-position:0 -136px;
+                }
+            }
+        }
+        .fl2{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-32px -136px;
+                }
+            }
+        }
+        .fl3{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-63px -136px;
+                }
+            }
+        }
+        .fl4{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-95px -136px;
+                }
+            }
+        }
+        .fl5{
+            width:299px;
+            overflow: hidden;
+            border: none;
+
+            div{
+                width:100px;
+                overflow: hidden;
+                img{
+                    display: block;
+                }
+
+                p{font:16px/56px "";
+                color:#88abb4;
+                text-align: center;
+                }
+            }
+            .f5-l{
+                margin-left:52px;
+            }
+
+            .f5-r{
+                margin-left:40px ;
+            }
+            
+        }
+
+
+    }
+    .ftxt{
+        margin-top:32px;
+
+        font:12px/20px "";
+        color:#81858f;
+        text-align: center;
     }
 
 }
