@@ -1,0 +1,313 @@
+header{height:30px;background:#f9f9f9;
+    font:12px/30px "";
+    color:#666;
+    
+    #headzuo{float: left;
+        
+    :nth-child(3){color:#e7ebf0;
+                margin:0 8px;}
+    em{display:inline-block;
+        width:11px;height:15px;
+        background: url(../img/htel.png) no-repeat center;}
+}
+#headyou{float: right;
+    :nth-child(even){color:#ebe7eb;
+        margin:0 11px}
+
+    span>a:hover{color:rgb(231, 65, 24)}
+
+    :nth-child(9){display: inline-block;
+                font:12px/20px "";
+                padding:0 5px;
+                background:#fff ;
+                border: 1px solid #e7e8e7;}
+        }
+    
+}
+nav{
+    background:url(https://js01.daoju.qq.com/mall/images/channelmall/lol/bg-head.jpg) no-repeat center top;
+    height:201px;
+
+    #nt{
+        height:125px;
+        overflow: hidden;
+
+        img{
+            display: block;
+            float: left;
+        }
+        .nt-l{
+            width:382px;
+            height:125px;
+        }
+        .nt-r{
+            width:288px;
+            height:125px;
+        }
+
+        #sou{float: left;
+            width:518px;
+            height:46px;
+            border:1px solid #566068;
+            margin-top:40px;
+            overflow: hidden;
+    
+            #sou-c{float: left;
+                border:none;
+                width:471px;
+                height:46px;
+                font:12px/46px "";
+                color:#aaa8a8;
+                text-indent:13px;
+                }
+    
+            #sou-c:hover{color: black;}
+    
+            #sou-r{width:47px;
+                height:46px;
+                background:#63656b url(../img/heiwen.png) no-repeat center;
+                float: left;
+                }
+    
+         }
+        
+    }
+
+    #nb{
+        height:76px;
+        background:#191b25;
+        width:1190px;
+        overflow: hidden;
+
+        li{
+            width:133px;
+            text-align: center;
+            float: left;
+
+            &:hover{
+                a{
+                    color:#d75009;
+                }
+            }
+
+            a{
+                font:18px/76px "";
+                color:#9f9f9f;
+            }
+        }
+        .car{
+            float: right;
+            width:185px;
+            a{color:#d75009;}
+        }
+
+    }
+
+}
+
+
+#banner{
+    height:840px;
+    background:#f3f4f6 ;
+
+    .ppp{
+        height:50px;
+        font:14px/50px "";
+        color:#606060;
+        a{
+            font:14px/50px "";
+            color:#3a3f4a;
+        }
+    }
+
+    #pbox{
+        height:710px;
+        width:1150px;
+        padding:20PX;
+        background:#fff;
+
+        h3{
+            font:16px/32px "";
+            color:#222;
+            border-bottom:1px solid #ddd;
+        }
+
+        table{
+            background: #f3f4f6;
+            margin-top:10px;
+            
+            thead{
+                height:37px;
+                font:12px/37px "";
+                color:#222;
+                text-align: center;
+                overflow: hidden;
+
+                tr{
+                    width:1110px;
+                    margin: 0 auto;
+
+                    th{
+                        width:110px;
+                    }
+                }
+            }
+            tbody{
+                font:12px/37px "";
+                color:#222;
+                text-align: center;
+                overflow: hidden;
+                
+                tr{
+                    width:1110px;
+                    margin: 0 auto;
+                    border-top:1px solid #ddd;
+
+                    th{
+                        overflow: hidden;
+                        width:110px;
+
+                        img{
+                            margin:3px auto;
+                            height:28px;
+                            width:39px;
+                        }
+                    }
+                    .num{
+                        width:50px;
+                    }
+                    .delete{
+                        color:#1c8bde;
+                    }
+                }
+                
+            }
+            
+
+
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+#foot{height:356px;
+    background:#3b3f4a;
+    overflow: hidden;
+
+    ul{
+        height:183px;
+        margin-top:25px;
+        overflow: hidden;
+        width:1190px;
+        border-bottom:1px solid #444853;
+
+        li{float: left;
+        border-right:1px solid #444853;
+            font:12px/24px "";
+            color:#acb1bb;
+            height:150px;
+            overflow: hidden;
+
+            div{
+                float: left;
+                height:150px;
+                s{
+                    width:32px;
+                    height:32px;
+                    background:url(../img/biao.png) no-repeat;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            .fp1{
+                font:16px/36px "";
+            }
+        }
+
+        .fl1{
+            width:209px;
+            .fll{
+                width:48px;
+                s{
+                    background-position:0 -136px;
+                }
+            }
+        }
+        .fl2{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-32px -136px;
+                }
+            }
+        }
+        .fl3{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-63px -136px;
+                }
+            }
+        }
+        .fl4{
+            width:226px;
+            
+            .fll{
+                width:48px;
+                margin-left:17px;
+                s{
+                    background-position:-95px -136px;
+                }
+            }
+        }
+        .fl5{
+            width:299px;
+            overflow: hidden;
+            border: none;
+
+            div{
+                width:100px;
+                overflow: hidden;
+                img{
+                    display: block;
+                }
+
+                p{font:16px/56px "";
+                color:#88abb4;
+                text-align: center;
+                }
+            }
+            .f5-l{
+                margin-left:52px;
+            }
+
+            .f5-r{
+                margin-left:40px ;
+            }
+            
+        }
+
+
+    }
+    .ftxt{
+        margin-top:32px;
+
+        font:12px/20px "";
+        color:#81858f;
+        text-align: center;
+    }
+
+}

@@ -44,7 +44,7 @@
         <div id="nb">
             <ul>
                 <li><a href="index.html">首页</a></li>
-                <li><a href="">商品列表</a></li>
+                <li><a href="list.html">商品列表</a></li>
                 <li><a href="">活动专区</a></li>
                 <li><a href="">限时折扣</a></li>
                 <li><a href="">聚豆乐园</a></li>
@@ -240,7 +240,7 @@
                             <img src="${this.res[this.ni].dimg}"/>
                         </div>
                     </div>
-                    <div class="box2">
+                    <div class="box2" index="${this.res[this.ni].num}">
                         <h3>${this.res[this.ni].name}</h3>
                         <p class="mqb">Q币价：${this.res[this.ni].price}Q币</p>
                         <p class="mwx">微信价：<a class="rmb">¥${this.res[this.ni].wxprice}</a></p>
@@ -249,13 +249,51 @@
                     </div>`
                     this.box2.innerHTML=str2;
 
-
+                    this.add();
         }
+        add(){
+            var that=this;
+            this.box2.addEventListener("click",function(eve){
+                var e=eve||window.event;
+                var target=e.target||e.srcElement;
+                if(target.className=="sale"){
+                    that.id=target.parentNode.getAttribute("index");
+                    that.setCook();
+                }
+            })
+        }
+        setCook(){
+            this.goods=getCookie("goods")?JSON.parse(getCookie("goods")):[];
 
+
+            if(this.goods.length<1){
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }else{
+                console.log(this.torrent)
+                var i=0;
+                var onoff = this.goods.some((val,idx)=>{
+                        i=idx;
+                    return val.id===this.id;
+                });
+                if(!onoff){
+                    this.goods.push({
+                        id:this.id,
+                        num:1
+                    })
+                }else{
+                    this.goods[i].num++;
+                }
+            }
+            setCookie("goods",JSON.stringify(this.goods));
+            alert("已添加到购物车")
+        }
+ 
 
     }
     new dis();
-
 
     class jing{
 			constructor(){
