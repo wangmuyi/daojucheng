@@ -32,7 +32,7 @@ define( ()=>{
                                 <p><b>[英雄联盟]</b>${this.res[i].name}</p>
                                 <p>QB价 ：<span class="red">${this.res[i].price} QB</span></p>
                                 <p>热卖推荐</p>
-                                <a class="sale" href="">立即抢购</a>
+                                <a class="sale" href="shop.html?id=${this.res[i].num}">立即抢购</a>
                             </dd>
                         </dl>`
             }

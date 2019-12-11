@@ -100,6 +100,128 @@
     </div>
 </div>
 </main>
-    
+<div id="foot">
+        <div class="margin">
+            <ul>
+                <li class="fl1">
+                    <div class="fll">
+                    <s></s>
+                    </div>
+                    <div class="flr">
+                    <p class="fp1">我是新手</p>
+                    <p>什么是道聚城</p>
+                    <p>如何购买</p>
+                    <p>如何赠送</p>
+                    <p>如何获取聚豆</p>
+                    </div>
+                </li>
+                <li class="fl2">
+                    <div class="fll">
+                    <s></s>
+                    </div>
+                    <div class="flr">
+                    <p class="fp1">个人中心</p>
+                    <p>发货时间</p>
+                    <p>如何领取</p>
+                    <p>补发规则</p>
+                    <p>Vip价定义</p>
+                    <p>道具状态定义</p>
+                    </div>
+                </li>
+                <li class="fl3">
+                    <div class="fll">
+                    <s></s>
+                    </div>
+                    <div class="flr">
+                    <p class="fp1">支付方式</p>
+                    <p>支付方式</p>
+                    <p>购物点支付</p>
+                    <p>如何充值</p>
+                    </div>
+                </li>
+                <li class="fl4">
+                    <div class="fll">
+                    <s></s>
+                    </div>
+                    <div class="flr">
+                    <p class="fp1">腾讯在线服务</p>
+                    <p>腾讯官方在线服务</p>
+                    </div>
+                </li>
+                <li class="fl5">
+                    <div class="f5-l">
+                        <img src="https://js01.daoju.qq.com/common/images/mall/zsdjc.png"/>
+                        <p>掌上道聚城</p>
+                    </div>
+                    <div class="f5-r">
+                            <img src="https://js01.daoju.qq.com/common/images/mall/wechatdjc.png"/>
+                            <p>道聚城公众号</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="ftxt">
+                <p>腾讯互动娱乐 | 服务条款| 腾讯游戏隐私保护指引| 腾讯游戏儿童隐私保护指引| 广告服务 | 腾讯游戏招聘 | 腾讯游戏客服 | 游戏地图 | 成长守护平台 | 商务合作 | 网站导航</p>
+                <p>COPYRIGHT © 1998 – 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+                <p>腾讯公司 版权所有</p>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="lib/jj.json"></script>
+<script src="lib/ajax.js"></script>
+<script src="lib/cookie.js"></script>
+<script>
+
+    class dis{
+        constructor(){
+            this.box1=document.querySelector("#ml ul");
+            this.box2=document.querySelector("#mr");
+            this.url="http://localhost:81/lib/jj.json";
+         
+            this.load();
+        }
+        load(){
+            var that =this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+                that.display();
+            })
+        }
+
+        display(){
+            let str1=""
+            for(var i=0;i<10;i++){
+                str1 +=`
+                <li>
+                <i>${i/1+1}</i>
+                <img src="${this.res[i].ximg}"/>
+                <p>${this.res[i].name}</p>
+                <p class="zz">Q币价：${this.res[i].price}Q币
+                </p>
+                <p>微信价：¥${this.res[i].wxprice}</p>
+            </li>
+                `
+            }
+            this.box1.innerHTML=str1;
+
+            let str2=""
+            for(var j=0;j<10;j++){
+                str2+=`
+                <div class="shop">
+            <img src="${this.res[j].zimg}"/>
+            <p>${this.res[j].name}</p>
+            <p class="pre">Q币价：<a>${this.res[j].price}Q币</a></p>
+            <p class="pre">微信价：<a>¥${this.res[j].wxprice}</a></p>
+            <a href="shop.html?id=${this.res[j].num}" class="sale" >立即购买</a>
+        </div> 
+                `
+            }
+            this.box2.innerHTML=str2;
+
+        }
+
+
+    }
+    new dis();
+</script>
 </html>
