@@ -18,7 +18,7 @@
                         <span>Q币充值</span>
                     </p>
                     <p id="headyou">
-                        <span>欢迎你，只为<a href="">退出</a></span>
+                            <span class="haha">您还未登录，请<a href="log.html" class="log">登录</a></span>
                         <span>|</span>
                         <span>我的订单</span>
                         <span>|</span>
@@ -185,6 +185,41 @@
 <script src="lib/ajax.js"></script>
 <script src="lib/cookie.js"></script>
 <script>
+
+class log{
+        constructor(){
+            this.log=document.querySelector(".haha")
+            this.msg=getCookie("userMsg")?JSON.parse(getCookie("userMsg")):[]
+            this.bian=document.querySelector(".bian");
+            
+            this.load();
+        }
+        load(){
+
+            for(var i=0;i<this.msg.length;i++){
+                if(this.msg[i].onoff==1){
+                    this.log.innerHTML=`
+                    欢迎你  ${this.msg[i].user}<a  class="out">注销</a>`
+                    this.out();
+                }
+            }
+           
+        }
+        out(){
+            this.out=document.querySelector('.out');
+            this.out.onclick=()=>{
+                for(var i=0;i<this.msg.length;i++){
+                    this.msg[i].onoff=0;
+                }
+                setCookie("userMsg",JSON.stringify(this.msg));
+                this.log.innerHTML=`
+                您还未登录，请<a href="log.html" class="log">登录</a>`;
+                
+            }
+        }  
+    }
+    new log();
+
     class che{
 			constructor(){
 				this.url="http://localhost:81/lib/jj.json";

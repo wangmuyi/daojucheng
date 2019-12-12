@@ -856,8 +856,7 @@
             for(var i=0;i<this.msg.length;i++){
                 if(this.msg[i].onoff==1){
                     this.log.innerHTML=`
-                    欢迎你  ${this.msg[i].user}<a href="index.html" class="out">注销</a>`
-
+                    欢迎你  ${this.msg[i].user}<a  class="out">注销</a>`
                     this.out();
                 }
             }
@@ -865,13 +864,12 @@
         }
         out(){
             this.out=document.querySelector('.out');
-
-            this.out.onclick=function(){
+            this.out.onclick=()=>{
                 for(var i=0;i<this.msg.length;i++){
                     this.msg[i].onoff=0;
                 }
                 setCookie("userMsg",JSON.stringify(this.msg));
-                this.out.innerHTML=`
+                this.log.innerHTML=`
                 您还未登录，请<a href="log.html" class="log">登录</a>`;
                 
             }
