@@ -162,16 +162,24 @@ nav{
                     width:1110px;
                     margin: 0 auto;
                     border-top:1px solid #ddd;
-
+                    img{
+                        margin:3px auto;
+                        height:28px;
+                        width:39px;
+                    }
+                    .kong{
+                        width:1100px;
+                        text-align: center;
+                        a{
+                            color:#1c8bde;
+                        }
+                    }
+                    
                     th{
                         overflow: hidden;
                         width:110px;
 
-                        img{
-                            margin:3px auto;
-                            height:28px;
-                            width:39px;
-                        }
+                        
                     }
                     .num{
                         width:50px;
@@ -182,7 +190,35 @@ nav{
                 }
                 
             }
-            
+
+            tfoot{
+              height:56px;
+              border:1px solid #ddd;
+              width:1148px;
+
+              tr{
+                  
+                  .price{
+                      width:150px;
+                      font:12px/56px "";
+                      color:#222;
+                        text-align:center ;
+                        a{font:24px/56px "";
+                            color:#f74a4a;
+                        }
+                  }
+                  .fu{
+                      cursor: pointer;
+                      height:56px;
+                      width:146px;
+                      background: #666;
+                      color:#fff;
+                      text-align: center;
+                    }
+                }
+                    
+            }
+
 
 
         }

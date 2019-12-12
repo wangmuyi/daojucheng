@@ -1,0 +1,68 @@
+body{
+    background:#eaf5fc;
+
+    #log{
+        width:270px;
+        height:364px;
+        padding: 0 100px;
+        background: #fff;
+        border: 2px solid #eee;
+        margin:288px auto;
+        border-radius:20px;
+        position: relative;
+
+        p{
+            text-align: center;
+        }
+        .p1{
+            font:700 20px/60px "";
+            color:#333;
+        }
+        .p2{
+            font:14px/60px "";
+            color:#666;
+            span{
+                color:#3fa8e9;
+            }
+        }
+        input{
+            width:268px;
+            height:38px;
+            border:1px solid #d7d7d7;
+            border-radius:4px;
+            margin-bottom:10px;
+            text-indent:20px;
+            font:14px/38px "";
+            color:#333;
+        }
+        .tijiao{
+            width:270px;
+            height:40px;
+            font:16px/40px "";
+            color:#fff;
+            background:#86ce2f ;
+            margin-bottom:10px;
+            display: block;
+            text-align: center;
+        }
+        .zhuce{
+            width:120px;
+            height:30px;
+            font:16px/30px "";
+            position: absolute;
+            bottom: 40px;
+            right:80px ;
+        }
+        .cha{
+            width:50px;
+            height:50px;
+            font:40px/50px "黑体";
+            position: absolute;
+            right:2px;
+            top:4px;
+            color:#878787;
+        }
+
+        
+    }
+}

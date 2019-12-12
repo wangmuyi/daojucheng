@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/log.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+</head>
+<body>
+    <div id="log">
+        <p class="p1">账号密码登录</p>
+        <p class="p2">适用快速<span>安全登录</span>,防止盗号</p>
+        <input type="text" class="name" placeholder="账号" />
+        <input type="password" class="pass" placeholder="密码" />
+        <a class="tijiao">登录</a>
+        <a class="zhuce" href="reg.html">去注册新账号</a>
+        <a class="cha" href="index.html">×</a>
+    </div>
+</body>
+<script src="lib/ajax.js"></script>
+<script src="lib/cookie.js"></script>
+<script>
+    class log{
+        constructor(){
+            this.nn=document.querySelector(".name");
+            this.pp=document.querySelector(".pass");
+            this.nu=document.querySelector(".tijiao");
+
+            this.add();
+        }
+        add(){
+            var that=this;
+            this.nu.onclick=function(){
+                that.load();
+            }
+        }
+
+        load(){
+            this.msg=getCookie("userMsg")?JSON.parse(getCookie("userMsg")):[];
+            this.n=this.nn.value;
+            this.p=this.pp.value;
+            for(var i=0;i<this.msg.length;i++){
+                if(this.n==this.msg[i].user&&this.p==this.msg[i].pass){
+                    this.msg[i].onoff=1;
+                    alert("登陆成功");
+                    location.href ="index.html";
+
+                }else{
+                    alert("登陆失败")
+                }
+            }
+               
+        }
+    }
+
+    new log();
+</script>
+</html>

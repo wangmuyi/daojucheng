@@ -85,25 +85,19 @@
 
         li.new:hover{background:#f55656 url(../img/new.png) no-repeat 99px 21px;}
     }
-    #nav-r{width:230px;
+    #nav-r{
+        display: block;
+        width:230px;
         height:41px;
         border-bottom:2px solid #e43333;
         margin-top: 5px;
-        background: #f74a4a url(../img/car.png) no-repeat 42px 15px;
+        background: #f74a4a url(../img/car.png) no-repeat 52px 15px;
         float: right;
         font:16px/44px "";
         color:#fff;
-        text-indent:70px;
+        text-indent:100px;
 
-        .nnum{display:inline-block;
-            width:60px;
-            height:30px;
-            border-left:1px solid #e04040;
-            margin-top: 7px;
-            font:600 18px/30px "黑体";
-            text-indent: 0;
-            text-align: center;
-            float:right}
+        
     }
 }
 

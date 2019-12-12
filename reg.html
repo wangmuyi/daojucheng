@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="css/reg.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+</head>
+<body>
+
+        <div id="reg">
+                <p class="p1">账号密码注册</p>
+                <p class="p2">欢迎注册QQ</p>
+                <input type="text" class="name" placeholder="设置账号" />
+                <input type="password" class="pass" placeholder="设置密码" />
+                <input type="password" class="pass2" placeholder="确认密码" />
+                <a class="tijiao">注册</a>
+                <a class="denglu" href="reg.html">去登录</a>
+                <a class="cha" href="index.html">×</a>
+            </div>
+</body>
+<script src="lib/ajax.js"></script>
+<script src="lib/cookie.js"></script>
+    <script>
+    class Reg{
+        constructor(){
+            this.nm=document.querySelector(".name");
+            this.pa1=document.querySelector(".pass");
+            this.pa2=document.querySelector(".pass2");
+            this.en=document.querySelector(".tijiao");
+
+            this.load();
+        }
+
+        load(){
+            var that=this;
+            this.en.onclick=function(){
+                that.u=that.nm.value;
+                that.p=that.pa1.value;
+                that.p2=that.pa2.value;
+                if(that.p==that.p2){
+                    that.setmsg();
+                }else{
+                    alert("两次密码不相同，请重新输入")
+                }
+            }
+        }
+        setmsg(){
+
+            this.msg=getCookie("userMsg")?JSON.parse(getCookie("userMsg")):[]
+            console.log(this.msg)
+            if(this.msg.length==0){
+                console.log(1)
+                this.msg.push({
+                    user:this.u,
+                    pass:this.p,
+                    onoff:0
+                })
+                setCookie("userMsg",JSON.stringify(this.msg));
+                
+                this.success();
+            }else{
+               var type= this.msg.some((val,idx)=>{
+                    return val.user === this.u
+               }) 
+               console.log(type)
+               if(type){
+                   alert("用户名重复")
+               }else{
+                   this.msg.push({
+                       user:this.u,
+                       pass:this.p,
+                       onoff:0
+                   })
+                   this.success();
+               }
+               setCookie("userMsg",JSON.stringify(this.msg));
+            }
+            
+        }
+        success(){
+            alert("注册成功，3秒后跳转界面")
+            setTimeout(() => {
+                location.href="log.html";
+            }, 3000);
+        }
+
+    }
+    new Reg();
+
+
+    </script>
+</html>

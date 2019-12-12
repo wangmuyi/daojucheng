@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>我的购物车-英雄联盟道聚城购物车</title>
     <link rel="stylesheet" href="css/car.css"/>
     <link rel="stylesheet" href="css/public.css"/>
 </head>
@@ -50,7 +50,7 @@
                 <li><a href="">聚豆乐园</a></li>
                 <li><a href="">周边商城</a></li>
                 <li><a href="">个人中心</a></li>
-                <li class="car"><s></s><a href="">购物车(  0  )</a></li>
+                <li class="car"><s></s><a href="car.html">购物车</a></li>
             </ul>
         </div>
         
@@ -83,10 +83,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
-                        <td colspan="8">购物车为空...<a href="index.html">去购物</a></td>
-                    </tr> -->
-                    <tr index="">
+                    <tr>
+                        <td colspan="9" class="kong">购物车为空...<a href="index.html">去购物</a></td>
+                    </tr>
+                    <!-- <tr index="">
                         <td><input class="ck" type="checkbox"/></td>
                         <td><img src=""/></td>
                         <td></td>
@@ -96,12 +96,14 @@
                         <td><input class="num" type="number" min=1/></td>
                         <td class="pr"></td>
                         <td class="delete">删除</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
                 <tfoot align="center">
                         <tr height="80px">
+                            <td colspan="6">
+                            <td class="number">共0个</td>
                             <td class="price">实付款:<a>￥0.00</a></td>
-                            <td>提交订单</td>
+                            <td class="fu">提交订单</td>
                         </tr>
                 </tfoot>
             </table>
@@ -183,7 +185,166 @@
 <script src="lib/ajax.js"></script>
 <script src="lib/cookie.js"></script>
 <script>
+    class che{
+			constructor(){
+				this.url="http://localhost:81/lib/jj.json";
+				this.box=document.querySelector("tbody");
+				this.tp=document.querySelector(".price");
+				this.tn=document.querySelector(".number")
+				this.dck=document.querySelector(".all")
+				
+				this.load();
+				this.add();
+				this.type=0;
+			}
+			add(){
+				var that=this;
+				this.box.addEventListener("click",function(eve){
+					var e=eve||window.event;
+					var target=e.target||e.srcElement;
+					if(target.className=="delete"){
+						that.id=target.parentNode.getAttribute("index");
+						target.parentNode.firstElementChild.firstElementChild.checked=false;
+						target.parentNode.remove();
+						that.nextload()
+						that.changeCookie(function(i){
+							that.goods.splice(i,1);
+							that.price();
+							that.num();
+						})
+					}
+				})
+				this.box.addEventListener("input",function(eve){
 
+					var e =eve||window.event;
+					var target=e.target||e.srcElement;
+					if(target.className=="num"){
+						that.id=target.parentNode.parentNode.getAttribute("index");
+						that.p=target.parentNode.previousElementSibling.previousElementSibling.innerHTML;
+						that.n=target.value;
+						target.parentNode.nextElementSibling.innerHTML=that.p*that.n;
+						that.price();
+						that.num();
+						that.changeCookie(function(i){
+						that.goods[i].num=target.value;
+						console.log(that.goods)
+
+						})
+					}
+				})
+			}
+			changeCookie(cb){
+				for(var i=0;i<this.goods.length;i++){
+					if(this.goods[i].id==this.id){
+						 cb(i);
+					break;
+				}
+				}
+				setCookie("goods",JSON.stringify(this.goods))
+			}
+
+			load(){
+				this.dck.checked=false;
+				var that=this;
+				var ppp=ajaxGet(this.url,function(res){
+					that.res=JSON.parse(res);
+					that.getcook();
+				})
+			}
+			getcook(){
+				this.goods=getCookie("goods")?JSON.parse(getCookie("goods")):[];
+				this.display();
+			}
+			display(){
+				var str3="";
+				for(var i=0;i<this.res.length;i++){
+					for(var j=0;j<this.goods.length;j++){
+						if(this.res[i].num==this.goods[j].id){
+							str3+=`<tr index="${this.res[i].num}">
+                        <td><input class="ck" type="checkbox"/></td>
+                        <td><img src="${this.res[i].ximg}"/></td>
+                        <td>${this.res[i].name}</td>
+                        <td>皮肤</td>
+                        <td>${this.res[i].price}</td>
+                        <td>永久</td>
+                        <td><input type="number" class="num" min=1 value="${this.goods[j].num}"/></td>
+                        <td class="pr">${this.res[i].price*this.goods[j].num}</td>
+                        <td class="delete">删除</td>
+                    </tr>`	}
+					}
+				}
+				this.box.innerHTML=str3;
+				this.nextload()
+				this.checked();
+			}
+			nextload(){
+				this.ack=document.querySelectorAll("tr .ck");
+				this.apr=document.querySelectorAll(".pr");
+				this.anum=document.querySelectorAll(".num");
+			}
+			checked(){
+				this.dck.onclick=()=>{
+					if(this.type==0){
+						for(var i=0;i<this.ack.length;i++){
+							this.ack[i].checked=true;
+						}
+						this.type=1;
+					}else{
+						for(var i=0;i<this.ack.length;i++){
+							this.ack[i].checked=false;
+						}
+						this.type=0;
+					}
+					this.price();
+					this.num();
+				};
+				this.ack.forEach((item,idx)=>{
+					item.onclick=()=>{
+					var onoff =true;
+					for(var i=0;i<this.ack.length;i++){
+						if(!this.ack[i].checked){
+							onoff = false;
+							break;
+						}
+					}
+					if(onoff){
+						this.dck.checked=true;
+						this.type=1;
+					}else{
+						this.dck.checked=false;
+						this.type=0;
+					}
+					
+					this.price();
+					this.num();
+				}
+				})
+				
+			}
+			price(){
+				var dp =0;
+				for(var i=0;i<this.apr.length;i++){
+					if(this.ack[i].checked){
+						dp+=(this.apr[i].innerHTML)/1;
+						// console.log(this.apr[i].innerHTML)
+					}
+				}
+				
+				this.tp.innerHTML="实付款:<a>￥"+dp+"</a>"
+			}
+			num(){
+				var dn =0;
+				for(var i=0;i<this.anum.length;i++){
+					if(this.ack[i].checked){
+						dn+=(this.anum[i].value)/1;
+						// console.log(this.anum[i].value)
+					}
+				}
+				this.tn.innerHTML="共"+dn+"个";
+			}
+
+		}
+    new che;
 
 </script>
 
