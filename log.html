@@ -41,15 +41,19 @@
             this.msg=getCookie("userMsg")?JSON.parse(getCookie("userMsg")):[];
             this.n=this.nn.value;
             this.p=this.pp.value;
+            var hehe = true;
             for(var i=0;i<this.msg.length;i++){
                 if(this.n==this.msg[i].user&&this.p==this.msg[i].pass){
+                    this.msg.user=0;
                     this.msg[i].onoff=1;
+                    setCookie("userMsg",JSON.stringify(this.msg));
+                    hehe = false;
                     alert("登陆成功");
                     location.href ="index.html";
-
-                }else{
-                    alert("登陆失败")
                 }
+            }
+            if(hehe){
+                alert("用户名或密码不正确")
             }
                
         }
