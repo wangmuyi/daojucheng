@@ -237,6 +237,15 @@
             }
             this.box1.innerHTML=str1;
 
+
+
+            this.sousuo=location.search;
+             this.kankan=this.sousuo.slice(5,this.sousuo.length)
+              var shuo = decodeURI(this.kankan)
+
+              if(this.kankan==""){
+
+            
             let str2=""
             for(var j=0;j<10;j++){
                 str2+=`
@@ -250,9 +259,25 @@
                 `
             }
             this.box2.innerHTML=str2;
-
+ 
+        }else{
+            let str2=""
+            for(var v =0;v<10;v++){
+                if(shuo==this.res[v].lei){
+                    str2+=`
+                <div class="shop">
+            <img src="${this.res[v].zimg}"/>
+            <p>${this.res[v].name}</p>
+            <p class="pre">Q币价：<a>${this.res[v].price}Q币</a></p>
+            <p class="pre">微信价：<a>¥${this.res[v].wxprice}</a></p>
+            <a href="shop.html?id=${this.res[v].num}" class="sale" >立即购买</a>
+        </div> 
+                `
+                }
+            }
+            this.box2.innerHTML=str2; 
+         }
         }
-
 
     }
     new dis();

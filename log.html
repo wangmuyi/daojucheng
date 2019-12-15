@@ -44,7 +44,6 @@
             var hehe = true;
             for(var i=0;i<this.msg.length;i++){
                 if(this.n==this.msg[i].user&&this.p==this.msg[i].pass){
-                    this.msg.user=0;
                     this.msg[i].onoff=1;
                     setCookie("userMsg",JSON.stringify(this.msg));
                     hehe = false;

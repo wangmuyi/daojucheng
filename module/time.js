@@ -14,7 +14,7 @@ define( ()=>{
         load(){
      
             var that=this;
-            var time2 = new Date(2019,11,15,0,0,0)
+            var time2 = new Date(2019,11,20,0,0,0)
 
             function shijian(t1, t2) {
               var t = parseInt(Math.abs(t1.getTime() - t2.getTime()) / 1000)

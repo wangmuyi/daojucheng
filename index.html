@@ -876,5 +876,36 @@
         }  
     }
     new log();
+
+    class sou{
+        constructor(){
+            this.soubox=document.querySelector("#sou-c");
+            this.sousou=document.querySelector("#sou-r");
+            this.url="http://localhost:81/lib/jj.json"
+
+            this.add();
+        }
+        add(){
+           
+            var that =this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+            })
+
+            this.sousou.addEventListener("click",()=>{
+                this.chuan();
+            })
+        }
+        chuan(){
+            this.zhao=this.soubox.value;
+            if(this.zhao==""){
+                alert("瞎啊:搜索空的")
+                location.href="index.html"
+            }else{
+            location.href=`list.html?lei=${this.zhao}`
+            }
+        }
+    }
+    new sou();
 </script>
 </html>

@@ -223,6 +223,7 @@
             this.box1=document.querySelector("#ml ul");
             this.box2=document.querySelector(".box");
             
+
             this.url="http://localhost:81/lib/jj.json";
          
             this.load();
@@ -298,8 +299,14 @@
         }
         setCook(){
             this.goods=getCookie("goods")?JSON.parse(getCookie("goods")):[];
+            this.msg=getCookie("userMsg")?JSON.parse(getCookie("userMsg")):[];
 
-
+            for(var l =0;l<this.msg.length;l++){
+                if(this.msg[l].onoff==1){
+                    this.buff=true;
+                }
+            }
+            if(this.buff){
             if(this.goods.length<1){
                 this.goods.push({
                     id:this.id,
@@ -323,6 +330,10 @@
             }
             setCookie("goods",JSON.stringify(this.goods));
             alert("已添加到购物车")
+        }else{
+            alert("您还未登录，滚去登录")
+        }
+
         }
  
 
